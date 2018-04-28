@@ -1,0 +1,293 @@
+<SCRIPT TYPE="text/javascript">
+
+        function speciesset() {
+            removeOptions(document.getElementById('drop3'));
+
+             if (document.getElementById("drop2").options[document.getElementById('drop2').selectedIndex].text == 'Sphagnum - B-001.001') {
+                addfordrop3("B-001.001.001", "Sphagnum cuspidatum - B-001.001.001");
+                addfordrop3("B-001.001.002", "Sphagnum fimbriatum - B-001.001.002");
+                addfordrop3("B-001.001.003", "Sphagnum girgensohnii - B-001.001.003");
+                addfordrop3("B-001.001.004", "Sphagnum nemoreum - B-001.001.004");
+                addfordrop3("B-001.001.005", "Sphagnum palustre - B-001.001.005");
+                addfordrop3("B-001.001.006", "Sphagnum papillosum - B-001.001.006");
+ 				addfordrop3("B-001.001.007", "Sphagnum plumulosum - B-001.001.007");
+                addfordrop3("B-001.001.008", "Sphagnum recurvum - B-001.001.008");
+                addfordrop3("B-001.001.009", "Sphagnum squarrosum - B-001.001.009");
+                addfordrop3("B-001.001.010", "Sphagnum subsecundum - B-001.001.010");
+				addfordrop3("B-001.001.011", "Sphagnum teres - B-001.001.011");
+
+            }
+
+
+        }
+
+        
+        function genusset() {
+
+            removeOptions(document.getElementById('drop2'));
+            removeOptions(document.getElementById('drop3'));
+
+            if ((document.getElementById("drop1").options[document.getElementById('drop1').selectedIndex].text == 'Sphagnaceae - B-01')) {
+                addfordrop2("B-001.001", "Sphagnum - B-001.001");
+            }
+            }
+
+        function addfordrop1(value, text) {
+
+            var x = document.getElementById("drop1");
+            var option = document.createElement("OPTION");
+            option.text = text;
+            option.value = value;
+            x.add(option);
+        }
+
+        function addfordrop2(value, text) {
+
+            var x = document.getElementById("drop2");
+            var option = document.createElement("OPTION");
+            option.text = text;
+            option.value = value;
+            x.add(option);
+        }
+
+        function addfordrop3(value, text) {
+
+            var x = document.getElementById("drop3");
+            var option = document.createElement("OPTION");
+            option.text = text;
+            option.value = value;
+            x.add(option);
+        }
+
+
+       
+    
+
+        function removeOptions(selectbox) {
+            var i;
+            for (i = selectbox.options.length - 1; i >= 1; i--) {
+                selectbox.remove(i);
+            }
+        }
+
+
+
+        function load_page() {
+            var selected_page = document.getElementById("drop2").value;
+            if (selected_page != "-- Select an option --") {
+                selected_page = "Genus Data/" + selected_page + ".html"
+                window.open(selected_page)
+
+
+            }
+        }
+        
+        function load_ref() {
+            var selected_page = document.getElementById("drop2").value;
+            if (selected_page != "-- Select an option --") {
+                selected_page = "Ref Data/" + selected_page + ".html"
+                window.open(selected_page)
+
+            }
+        }
+        
+        function load_pagesp() {
+            var selected_page = document.getElementById("drop3").value;
+            if (selected_page != "-- Select an option --") {
+                selected_page = "SP Data1/" + selected_page + ".html"
+                window.open(selected_page)
+
+                // window.location.href = selected_page
+                //Please note that the value recived,
+                //in this case selected_page,
+                //should be a valid url!
+                //Therefore the value of the
+                //<option> tag should be itself 
+                //a url !
+                //ex.: <option value="page.php"> is valid
+                //<option value="page_1"> is not valid
+            }
+        }
+        
+      
+
+        function familyset() {
+
+            removeOptions(document.getElementById('drop1'));
+                      
+            addfordrop1("Sphagnaceae", "Sphagnaceae - B-01");
+
+           
+        }
+
+</script>
+
+
+
+
+
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="File-List" href="Bry_files/filelist.xml">
+<title>Plant Chromosome Database for Sp</title>
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+
+
+
+
+
+
+
+</head>
+
+<body background="paper.jpg" style="background-attachment: fixed" onload="FP_preloadImgs(/*url*/'icons/button2E.jpg', /*url*/'icons/button2D.jpg', /*url*/'icons/button37.jpg', /*url*/'icons/button36.jpg', /*url*/'icons/button3A.jpg', /*url*/'icons/button39.jpg', /*url*/'icons/button40.jpg', /*url*/'icons/button3F.jpg')">
+
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="C:\Chromosome-DNA-C-Value\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><img border="0" src="icons/top.jpg" width="1245" height="185"></p>
+</form>
+<div style="position: absolute; left: 11px; top: 18px; width: 1243px; height: 182px">
+	<p style="text-align: center; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging; margin-top: 0pt; margin-bottom: 0pt">&nbsp;</p>
+	<p style="text-align: center; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging; margin-top: 0pt; margin-bottom: 0pt">
+	<b><font face="Monotype Corsiva" size="7" color="#FFFFFF">Database on Genome 
+	Related-information of Indian Plants (dGRIP)</font></b></p>
+	<p style="text-align: center; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging; margin-top: 0pt; margin-bottom: 0pt">&nbsp;</p>
+	<form method="POST" action="--WEBBOT-SELF--">
+		<!--webbot bot="SaveResults" U-File="C:\Chromosome-DNA-C-Value\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+		<div style="position: absolute; top: 83px; left: 0px; width: 1242px; height: 76px; z-index: 1">
+			<div style="position: relative; left: 69px; top: 22px">
+				<p style="text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging; margin-top: 0pt; margin-bottom: 0pt">&nbsp;&nbsp;&nbsp;&nbsp;
+				</p>
+				<p style="text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging; margin-top: 0pt; margin-bottom: 0pt">&nbsp;</p>
+				<p style="text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging; margin-top: 0pt; margin-bottom: 0pt">&nbsp;
+				<a href="index1.html">
+				<img border="0" id="img1" src="icons/button2C.jpg" height="33" width="100" alt="HOME" fp-style="fp-btn: Metal Tab 1; fp-orig: 0" fp-title="HOME" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'icons/button2D.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'icons/button2C.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'icons/button2E.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'icons/button2D.jpg')"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="Overview.html">
+				<img border="0" id="img2" src="icons/button35.jpg" height="33" width="100" alt="ABOUT" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'icons/button36.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'icons/button35.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'icons/button37.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'icons/button36.jpg')" fp-style="fp-btn: Metal Tab 1; fp-orig: 0" fp-title="ABOUT"></a>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="Team.html">
+				<img border="0" id="img3" src="icons/button38.jpg" height="33" width="100" alt="CONTACT" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'icons/button39.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'icons/button38.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'icons/button3A.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'icons/button39.jpg')" fp-style="fp-btn: Metal Tab 1; fp-orig: 0" fp-title="CONTACT"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="construction.html">
+				<img border="0" id="img5" src="icons/button3E.jpg" height="33" width="100" alt="HELP" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'icons/button3F.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'icons/button3E.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'icons/button40.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'icons/button3F.jpg')" fp-style="fp-btn: Metal Tab 1; fp-orig: 0" fp-title="HELP"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				
+				</div>
+		</div>
+	</form>
+</div>
+<p style="text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging; margin-top: -1pt; margin-bottom: -1pt"><!--[if gte vml 1]><v:shapetype id="_x0000_t66"
+ coordsize="21600,21600" o:spt="66" adj="5400,5400" path="m@0,l@0@1,21600@1,21600@2@0@2@0,21600,,10800xe">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="val #0"/>
+  <v:f eqn="val #1"/>
+  <v:f eqn="sum 21600 0 #1"/>
+  <v:f eqn="prod #0 #1 10800"/>
+  <v:f eqn="sum #0 0 @3"/>
+ </v:formulas>
+ <v:path o:connecttype="custom" o:connectlocs="@0,0;0,10800;@0,21600;21600,10800"
+  o:connectangles="270,180,90,0" textboxrect="@4,@1,21600,@2"/>
+ <v:handles>
+  <v:h position="#0,#1" xrange="0,21600" yrange="0,10800"/>
+ </v:handles>
+</v:shapetype><v:shape id="_x0000_s1029" type="#_x0000_t66" alt="BACK"
+ href="index1.html" style='position:absolute;left:22.5pt;top:165pt;width:59.25pt;
+ height:36pt;z-index:1' fillcolor="#f60">
+ <v:textbox>
+<table cellspacing="0" cellpadding="0" width="100%" height="100%">
+	<tr>
+		<td align="center">BACK</td>
+	</tr>
+</table>
+ </v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:1;left:28px;top:218px;width:86px;height:56px'><map
+name=MicrosoftOfficeMap0><area shape=Polygon
+coords="24, 4, 24, 16, 83, 16, 83, 40, 24, 40, 24, 52, 4, 28, 24, 4"
+href="index1.html" title=""></map><img border=0 width=86 height=56
+src="Bry_files/image001.gif" usemap="#MicrosoftOfficeMap0" alt=BACK v:shapes="_x0000_s1029"></span><![endif]>&nbsp;&nbsp;&nbsp;
+<span style="font-size: 10.5pt; font-family: Baskerville Old Face; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="font-weight: 700"><font size="6">
+<span style="font-family: Baskerville Old Face; color: black; text-decoration:underline">
+Bryophytes</span></font></span></p>
+<p style="text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging; margin-top: -1pt; margin-bottom: -1pt">&nbsp;</p>
+&nbsp;<p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <b><font size="5">
+&nbsp;</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b><font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
+Family - ID:&nbsp; </font></b><font size="3"> 
+<select size="1"  id="drop1" name="D1" onfocus="familyset();"  onchange="genusset();" style="font-size:12pt"><option value="">
+-- Select an option --</option></select></font></p>
+<p><b><font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></b>
+<font size="5"><b>&nbsp;&nbsp;&nbsp;&nbsp;</b></font><b><font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
+Genus - ID:&nbsp;&nbsp; </font></b><font size="3"> 
+<select size="1"  id="drop2" name="D2" onchange="speciesset();" style="font-size:12pt"><option value="">
+-- Select an option --</option></select></font><b><font size="4">&nbsp;&nbsp;&nbsp;
+</font></b><font size="4">
+<input type="button" value="Details" name="B1" onclick="load_page()" style="font-weight: 700"></font><b><font size="4">&nbsp;&nbsp;
+</font></b><font size="4">
+<input type="button" value="References" name="B2" onclick="load_ref()" style="font-weight: 700"></font></p>
+<p><b><font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></b>
+<font size="5"><b>&nbsp;</b></font><b><font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+Species - ID: </font></b><font size="4">&nbsp;<select size="1"  id="drop3" name="D3" style="font-size:12pt"><option value="">
+-- Select an option --</option></select></font><b><font size="4">&nbsp;&nbsp;&nbsp;
+</font></b><font size="4">
+<input type="button" value="Details" name="B3" onclick="load_pagesp()" style="font-weight: 700"></font><b><font size="4">&nbsp;&nbsp;
+</font></b></p>
+<p style="text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging; margin-top: 0pt; margin-bottom: 0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<p style="text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging; margin-top: 0pt; margin-bottom: 0pt">&nbsp;</p>
+<p style="text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging; margin-top: 0pt; margin-bottom: 0pt">&nbsp;</p>
+<p style="text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging; margin-top: 0pt; margin-bottom: 0pt">
+<img border="0" src="Bry_files/Bry.ht1.jpg" width="1237" height="146"></p>
+
+</body>
+
+</html>
